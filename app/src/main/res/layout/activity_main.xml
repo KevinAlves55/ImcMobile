@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/activity_backgroud"
+    android:orientation="vertical">
+
+    <!--
+
+       - Usamos layout_width="match-parent" para herdar a largura do componente pai
+         Usamos layout_height="match-parent" para herdar a altura do componente pai -
+
+        - Já "wrap_content" seria a altura/largura do conteudo.
+
+        Quando não tiver nada dentro da tag, podemos fechar dessa forma: "<button/>"
+
+    -->
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/bmi"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Índice de Massa Corporal"
+        android:layout_gravity="center"
+        android:textSize="24sp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto"/>
+
+    <EditText
+        android:id="@+id/edit_peso"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/edit_text_backgroud"
+        android:padding="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Qual seu peso?"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        android:inputType="numberDecimal"
+        android:drawableStart="@drawable/fitness_center_24"
+        android:drawableTint="@color/white"
+        android:drawablePadding="5dp"/>
+
+    <EditText
+        android:id="@+id/edit_altura"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/edit_text_backgroud"
+        android:padding="20dp"
+        android:hint="Qual a sua altura?"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        android:inputType="numberDecimal"
+        android:drawableStart="@drawable/altura"
+        android:drawableTint="@color/white"
+        android:drawablePadding="5dp"/>
+
+    <Button
+        android:id="@+id/btn_calular"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:background="@drawable/button_backgroud"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto"
+        android:padding="20dp"
+        android:textSize="20sp"
+        android:textAllCaps="false"/>
+
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:paddingStart="35dp"
+        android:paddingTop="50dp"
+        android:textSize="48sp"
+        android:background="@drawable/result"/>
+
+</LinearLayout>
